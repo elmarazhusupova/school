@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список учеников</title>
+</head>
+<body>
+    <h1>Список учеников</h1>
+    <ul>
+        {% for student in students %}
+            <li>{{ student.full_name }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'student-create' %}">Добавить ученика</a>
+</body>
+</html>
